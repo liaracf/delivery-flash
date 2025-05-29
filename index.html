@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery Flash</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="assets/logomvp.jpg" alt="Logo Delivery Flash" class="logo">
+    <h1>Delivery Flash</h1>
+  </header>
+
+  <main>
+    <h2>Lojas Disponíveis na sua região</h2>
+    <div class="lojas">
+      <a href="loja.html?loja=1" class="loja">Cigano Pizzas</a>
+      <a href="loja.html?loja=2" class="loja">Superfarma OuroBranco</a>
+      <a href="loja.html?loja=3" class="loja">Sacolão Ouro Frutas</a>
+      <a href="loja.html?loja=4" class="loja">Trailer Bom Gosto</a>
+
+    </div>
+
+    <h2>Encontre-nos no mapa</h2>
+    <div id="mapa"></div>
+  </main>
+
+  <script src="script.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
+</body>
+</html>

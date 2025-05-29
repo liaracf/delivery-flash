@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+  }
+  
+  header {
+    background-color: #ff2222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 200px;
+    height: 200px;
+    vertical-align: middle;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .lojas {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  
+  .loja {
+    background-color: ff2222;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .loja:hover {
+    background-color: #ff2222;
+  }
+  
+  #mapa {}
+  
+  
+  li {
+    background: white;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #ff2222;
+  }
+  
+  .zap {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;   
+  }
+  

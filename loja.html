@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <html lang="pt-BR">
+ <head>
+  <meta charset="UTF-8">
+  <title>Itens da Loja</title>
+  <link rel="stylesheet" href="style.css">
+ </head>
+ <body>
+  <header>
+    <img src="assets/logomvp.png" alt="Logo Delivery Flash" class="logo">
+    <h1>Delivery Flash - Itens da Loja</h1>
+  </header>
+
+  <main>
+    <h2 id="nome-loja">Carregando loja...</h2>
+    <ul id="itens-lista"></ul>
+  </main>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const lojaId = params.get('loja');
+    const lojas = {
+      "1": { nome: "Cigano Pizzas", itens: ["CALABRESA", "TOSCANA", "BEIRUTE"] },
+      "2": { nome: "SuperFarma OB", itens: ["LUFTAL", "ESMALTE RISQUÉ", "SHAMPOO PANTENE"] },
+      "3": { nome: "Sacolão Ouro Fruitas", itens: ["KILO DE LARANJA", "CAFÉ SANTA CLARA", "DESINFETANTE IPÊ"] },
+      "4": { nome: "Trailer BomGosto", itens: ["HAMBURGUER", "ITAIPAVA 250ML", "COXINHA"] },
+      "5": { nome: "Petiscaria Rafael", itens: ["CUSCUZ RECHEADO", "MINI PIZZA", "BATATA FRITA"] }
+    };
+
+    const loja = lojas[lojaId];
+    if (loja) {
+      document.getElementById('nome-loja').textContent = loja.nome;
+      const lista = document.getElementById('itens-lista');
+      loja.itens.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        lista.appendChild(li);
+      });
+    } else {
+      document.getElementById('nome-loja').textContent = "Loja não encontrada";
+    }
+  </script>
+ 
+ 
+   
+    <a src="style.css" href="zap.html" >
+      <img class="zap"  src="assets/zap.png" alt="zap">
+    </a>
+   
+   
+ 
+ 
+ </body>
+</html>
