@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Delivery Flash</title>
   <link rel="stylesheet" href="style.css">
+  
+  <!-- CSS do Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <style>
+    /* Garante que o mapa apareça */
+    #mapa {
+      height: 400px; /* Ajuste a altura conforme necessário */
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -19,16 +31,28 @@
       <a href="loja.html?loja=2" class="loja">Superfarma OuroBranco</a>
       <a href="loja.html?loja=3" class="loja">Sacolão Ouro Frutas</a>
       <a href="loja.html?loja=4" class="loja">Trailer Bom Gosto</a>
-
     </div>
 
     <h2>Encontre-nos no mapa</h2>
     <div id="mapa"></div>
   </main>
 
-  <script src="script.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  <!-- JS do Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <script>
+    // Cria o mapa e define a visão inicial
+    var map = L.map('mapa').setView([-6.755768407923016, -38.97681026638281], 13); 
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Adiciona um marcador
+    L.marker([-6.755768407923016, -38.97681026638281]).addTo(map)
+      .bindPopup('Lavras da Mangabeira, Ceará')
+      .openPopup();
   </script>
+
 </body>
 </html>
